@@ -9,13 +9,15 @@ public class MaxWealth {
     static int maximumWealth(int[][] accounts) {
         int max = 0;
 
-        for (int person = 0; person < accounts.length; person++) {
+        for(int[] person: accounts)
+        {
             int rowSum = 0;
-            for (int account = 0; account < accounts[person].length; account++) {
-                rowSum += accounts[person][account];
+            for(int account: person)
+            {
+                rowSum += account;
             }
-
-            if (rowSum > max) {
+            
+            if(rowSum > max){
                 max = rowSum;
             }
         }
